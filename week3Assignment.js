@@ -121,7 +121,7 @@ class GameCharacter {
         this.superPower = superPower;
     }
     describe(){
-        console.log(this.name + " has become the superhero " + this.superhero 
+        alert(this.name + " has become the superhero " + this.superhero 
         + " and can beat opponents with the super power " + this.superPower);
     }
 } // creating object for code below
@@ -133,8 +133,7 @@ function becomeSuperhero(){
     var superhero = prompt('Who is your favorite superhero?');
     var superPower = prompt('What is your super power?');
     let newSuperhero = new GameCharacter(name,superhero,superPower);
-    alert(name + " has become the superhero " + superhero 
-    + " and can beat opponents with the super power " + superPower);
+    newSuperhero.describe();
     }else{
         alert('Oh well, maybe next life.');
     }
