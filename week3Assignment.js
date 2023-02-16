@@ -1,15 +1,15 @@
-let ages = [3, 9, 23, 64, 2, 8, 28, 93];
+let ages = [3, 9, 23, 64, 2, 8, 28, 93]; //creates array
 console.log(ages);
-var subtract = ages.pop() - ages.shift();
+var subtract = ages.pop() - ages.shift(); // subtracts first from last
 console.log(subtract);
 ages.push(109);
-var subtract = ages.pop() - ages.shift();
+var subtract = ages.pop() - ages.shift(); // same as above but with added element
 console.log(subtract);
 let sum = 0;
 for(let age of ages){
     sum += age;
 }
-console.log(sum/ages.length);
+console.log(sum/ages.length); //after looping through array sum divided by length(total num of elements) gives avg
 
 let names = ["Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"];
 console.log(names);
@@ -18,9 +18,9 @@ for(let name of names){
     let num = name.length;
     total += num;
 }
-console.log(total/names.length);
+console.log(total/names.length); //created array then found length of each element divided by total num elements
 
-let result = '';
+let result = ''; //empty string
 
 for (let i = 0; i < names.length; i++) {
     result = result.concat(names[i]);
@@ -28,7 +28,7 @@ for (let i = 0; i < names.length; i++) {
         result = result.concat(" ");
     }
 }
-console.log(result);
+console.log(result); //added each new string to empty string
 
 //Q3 array[array.length - 1];
 //Q4 array[0];
@@ -37,13 +37,13 @@ let nameLength = [];
 for(let name of names){
     nameLength.push(name.length);
 }
-console.log(nameLength);
+console.log(nameLength); //looped through and added length of each element to empty array
 
 let nameSum = 0;
 for(let name of nameLength){
     nameSum += name;
 }
-console.log(nameSum);
+console.log(nameSum); // added all lengths in above array
 
 function sayWordNumber(word,n){
     let words = "";
@@ -52,12 +52,12 @@ function sayWordNumber(word,n){
     }
     return words;
 }
-console.log(sayWordNumber("puppy",4));
+console.log(sayWordNumber("puppy",4)); // created function w/2 parameters and loop for printing
 
 function returnFullName(firstName, lastName){
     return firstName + " " + lastName;
 }
-console.log(returnFullName('Sam','Knight'));
+console.log(returnFullName('Sam','Knight')); // just concatenating 2 strings
 
 function isArrayBig(array){
     let sum = 0;
@@ -69,11 +69,12 @@ function isArrayBig(array){
     } else{
         return false;
     }
-}
+} // function compares the sum of elements in array to the value 100
+
 let newArray = [6,7,8,99,77,66,44];
 let otherArray = [6,4,3,5];
 console.log(isArrayBig(newArray));
-console.log(isArrayBig(otherArray));
+console.log(isArrayBig(otherArray)); // testing function
 
 function arrayAverage(array){
     let sum = 0;
@@ -82,7 +83,7 @@ function arrayAverage(array){
     }
     return sum/array.length;
 }
-console.log(arrayAverage(otherArray));
+console.log(arrayAverage(otherArray)); // function adds value of elements and divides by num of elements in array
 
 function isArray1Bigger(array1,array2){
     let sum1 = 0;
@@ -98,7 +99,7 @@ function isArray1Bigger(array1,array2){
     }else{
         console.log(false);
     }
-}
+} // compares total in both arrays
 isArray1Bigger(newArray,otherArray);
 isArray1Bigger(otherArray,newArray);
 
@@ -111,7 +112,7 @@ function willBuyDrink(isHotOutside, moneyInPocket){
 }
 willBuyDrink(false,45);
 willBuyDrink(true,45);
-willBuyDrink(true,2);
+willBuyDrink(true,2); //tests above code logic
 
 class GameCharacter {    
     constructor(name,superhero,superPower){
@@ -123,7 +124,7 @@ class GameCharacter {
         console.log(this.name + " has become the superhero " + this.superhero 
         + " and can beat opponents with the super power " + this.superPower);
     }
-}
+} // creating object for code below
 //the function below was made to practice user input and JS
 function becomeSuperhero(){
     let ans = prompt('Would you like to become a superhero? Yes or No');
